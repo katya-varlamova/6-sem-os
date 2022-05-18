@@ -3,6 +3,8 @@
 #include <sys/stat.h>
 #include <dirent.h>
 #include<unistd.h>
+#include <iostream>
+
 #define OPENDIR_ERROR 1
 #define CLOSEDIR_ERROR 2
 int print_info(const std::string &path, int lev)
@@ -62,6 +64,7 @@ int walk(std::string root_path)
 }
 
 int main() {
+    std::cout << ".";
     walk("/Users/kate/Desktop");
     return 0;
 }
